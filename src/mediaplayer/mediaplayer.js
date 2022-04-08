@@ -189,17 +189,17 @@ video.addEventListener("mouseover", () => {
 	controls.style.visibility = "visible";
 });
 
-// video.addEventListener("mouseleave", () => {
-// 	controls.style.visibility = "hidden";
-// });
+video.addEventListener("mouseleave", () => {
+	controls.style.visibility = "hidden";
+});
 
 controls.addEventListener("mouseover", () => {
 	controls.style.visibility = "visible";
 });
 
-// controls.addEventListener("mouseleave", () => {
-// 	controls.style.visibility = "hidden";
-// });
+controls.addEventListener("mouseleave", () => {
+	controls.style.visibility = "hidden";
+});
 
 /* Media player functionality */
 const play = () => {
