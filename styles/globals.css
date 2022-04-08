@@ -1,0 +1,78 @@
+:root {
+  --fullblack: #000000;
+  --fullblack_transparent: #00000088;
+  --black: #1e1c2a;
+  --gray: #353340;
+  --midgray: #514f55;
+  --lightgray: #dadadb;
+  --white: #fbfbfb;
+  --red: #ea5f5f;
+  --orange: #ff7551;
+  --purple: #8941e3;
+  --green: #22af7c;
+}
+
+/* General styling */
+
+html {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  font-size: 16px;
+  padding: 4vh 4rem 6vh 3rem;
+  margin: 0;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--lightgray);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #dadadbaa;
+}
+
+i {
+  font-size: 1.2rem;
+}
+
+#app {
+  width: 100%;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.off {
+  display: none;
+}
+
+@media screen and (max-width: 1300px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    padding: 4vh 2rem;
+  }
+
+  #app {
+    grid-template-columns: 1fr;
+  }
+}

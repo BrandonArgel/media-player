@@ -1,0 +1,107 @@
+/* Live Chat section */
+#live-chat {
+  background-color: var(--gray);
+  padding: 1rem 1rem 0;
+  border-radius: 1rem;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: 10% 1fr 3rem;
+  max-height: 34vw;
+}
+
+#live-chat__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#live-chat__header--title {
+  margin: 0;
+}
+
+#live-chat__header--people {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--lightgray);
+}
+
+#live-chat__header--people p {
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+#live-chat__content {
+  overflow-y: scroll;
+}
+
+.live-chat__content--post {
+  display: flex;
+  align-items: flex-start;
+}
+
+.live-chat__content--post div {
+  margin: 0 1rem;
+}
+
+.live-chat__content--post h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1rem;
+}
+
+.live-chat__content--post p {
+  font-size: 0.7rem;
+  color: var(--lightgray);
+  margin: 0 0 1rem;
+  word-break: break-word;
+}
+
+#live-chat__write {
+  background-color: var(--midgray);
+  color: var(--lightgray);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#live-chat__write textarea {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.7rem;
+  background-color: transparent;
+  border: none;
+  color: var(--white);
+  width: 90%;
+  height: 1rem;
+  resize: none;
+}
+
+#live-chat__write textarea:focus {
+  outline: none;
+}
+
+#live-chat__write textarea::placeholder {
+  color: var(--white);
+}
+
+#live-chat__write--button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: var(--lightgray);
+}
+
+#live-chat__write i:hover {
+  cursor: pointer;
+  color: var(--white);
+}
+
+@media screen and (max-width: 700px) {
+  #live-chat {
+    max-height: 60vw;
+    grid-template-rows: 2rem 1fr 3rem;
+  }
+}

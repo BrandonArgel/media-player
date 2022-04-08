@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles -->
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="./styles/coolicons.css" />
+    <link rel="stylesheet" href="./styles/icomoon.css">
+    <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/mediaplayer.css">
+    <link rel="stylesheet" href="./styles/livechat.css">
+    <link rel="stylesheet" href="./styles/videodescription.css">
+    <link rel="stylesheet" href="./styles/relatedvideos.css">
+    <!-- Scripts -->
+    <script src="./src/livechat/livechat.js" type="module" defer></script>
+    <script src="./src/mediaplayer/mediaplayer.js" type="module" defer></script>
+    <script src="./src/video-description/video-description.js" type="module" defer></script>
+    <script src="./src/related-videos/related-videos.js" type="module" defer></script>
+    <title>Mediaplayer</title>
+  </head>
+  <body>
+    <header>
+      <label class="search">
+        <input type="text" placeholder="Search"></input>
+        <i class="ci-search"></i>
+      </label>
+      <div class="profile">
+        <div class="profile__user">
+          <img src="./assets/avatars/Alexander.svg" alt="user avatar">
+        </div>
+        <i class="ci-notification_outline_dot"></i>
+      </div>
+    </header>
+    <main id="app">
+      <section id="mediaplayer">
+        <video id="mediaplayer__video"></video>
+        <div id="mediaplayer__controls">
+          <i id="play-button" class="ci-play_arrow"></i>
+          <i id="pause-button" class="ci-pause_circle_outline off"></i>
+          <progress id="progress-bar" value="0" max="100"></progress>
+          <p><span id="current-min">00</span>:<span id="current-sec">00</span> / <span id="duration-min">00</span>:<span id="duration-sec">00</span></p>
+          <i id="next-button" class="ci-skip_next"></i>
+          <i id="volume-button" class="icon-volume-medium"></i>
+          <i id="mute-button" class="icon-volume-mute2 off"></i>
+          <input type="range" id="volume-range" min="0" max="100"></input>
+          <i id="fullscreen-button" class="ci-move"></i>
+        </div>
+      </section>
+      <section id="live-chat">
+        <div id="live-chat__header">
+          <h2 id="live-chat__header--title">Live Chat</h2>
+          <div id="live-chat__header--people">
+            <i class="ci-user_voice"></i>
+            <p>15.986 people</p>
+          </div>
+        </div>
+        <div id="live-chat__content"></div>
+        <form id="live-chat__write">
+          <textarea id="live-chat__write--text" type="text" placeholder="Write your message" maxlength="120" required></textarea>
+          <button id="live-chat__write--button" type="submit"><i class="ci-comment_check"></i></button>
+        </form>
+      </section>
+      <section id="video-description">
+        <div id="video-description__content">
+          <div id="video-description__content--owner">
+            <img id="author-avatar" alt="video owner avatar">
+            <div>
+              <h3 id="author-name"></h3>
+              <p>1.980.893 subscribers</p>
+            </div>
+          </div>
+          <h1 id="video-title"></h1>
+          <p id="video-brief"></p>
+        </div>
+        <div id="video-description__actions">
+          <div id="video-description__actions--buttons">
+            <button id="share-button">
+              <i class="ci-share"></i>
+              <p>Share</p>
+            </button>
+            <button id="favorite-button">
+              <i class="ci-heart_fill">
+              </i>
+              <p>Favorites</p>
+            </button>
+          </div>
+          <div class="video-description__actions--data">
+            <i class="ci-play_circle_outline"></i>
+            <p>125.908 views</p>
+          </div>
+          <div class="video-description__actions--data">
+            <i class="ci-heart_fill"></i>
+            <p>47.987 likes</p>
+          </div>
+          <div class="video-description__actions--data">
+            <i class="ci-cast"></i>
+            <p>1.938.394 streaming</p>
+          </div>
+          <div class="video-description__actions--data">
+            <i class="ci-stopwatch"></i>
+            <p>Started 2 hours ago</p>
+          </div>
+        </div>
+      </section>
+      <section id="related-videos">
+        <h2 id="related-videos__title">Related Videos</h2>
+        <div id="related-videos__cards">     
+        </div>
+        <button id="related-videos__more-videos-btn">See all related videos</button>
+      </section>
+    </main>
+  </body>
+  </html>
+  
